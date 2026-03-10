@@ -1,0 +1,15 @@
+<svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="50" cy="50" r="48" fill="#DC2626" stroke="#000000" stroke-width="2"/>
+  <g transform="translate(50, 50)">
+    <!-- Helmet/Baret -->
+    <path d="M-15,-20 L-20,-10 L-15,0 L15,0 L20,-10 L15,-20 Z" fill="#FFFFFF" stroke="#000000" stroke-width="1.5"/>
+    <ellipse cx="0" cy="-20" rx="15" ry="5" fill="#FFFFFF" stroke="#000000" stroke-width="1.5"/>
+    
+    <!-- Gear/Dişli -->
+    <circle cx="-12" cy="12" r="8" fill="none" stroke="#FFFFFF" stroke-width="2"/>
+    <path d="M-12,4 L-12,20 M-20,12 L-4,12 M-17.66,6.34 L-6.34,17.66 M-6.34,6.34 L-17.66,17.66" stroke="#FFFFFF" stroke-width="2"/>
+    
+    <!-- Lightning/Şimşek -->
+    <path d="M10,5 L5,15 L12,15 L8,25 L18,12 L11,12 L15,5 Z" fill="#FFD700" stroke="#000000" stroke-width="1"/>
+  </g>
+</svg>
