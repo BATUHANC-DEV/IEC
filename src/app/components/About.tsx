@@ -91,7 +91,7 @@ export function About() {
             <div className="absolute -inset-8 bg-gradient-to-br from-red-500/20 to-black/20 rounded-3xl blur-3xl"></div>
             <div className="relative rounded-3xl overflow-hidden shadow-2xl">
               <img
-                src="https://images.unsplash.com/photo-1615774925655-a0e97fc85c14?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxpbmR1c3RyaWFsJTIwZWxlY3RyaWNhbCUyMGVuZ2luZWVyaW5nJTIwdGVhbXxlbnwxfHx8fDE3NzMxODA4NDJ8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+               src="/about-hero.jpg"
                 alt="IEC Elektrik Mühendislik"
                 className="w-full h-[600px] object-cover"
               />
