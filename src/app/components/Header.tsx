@@ -60,7 +60,7 @@ export function Header() {
         <nav className="flex justify-between items-center py-2">
           <div className="flex items-center gap-3">
             <img 
-              src={logo} 
+             src="/logo.png" 
               alt="IEC Mühendislik Logo" 
               className="h-16 w-16 object-contain transform hover:scale-110 transition-transform duration-300"
               style={{ mixBlendMode: 'darken' }}
