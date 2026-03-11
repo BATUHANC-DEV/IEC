@@ -91,7 +91,7 @@ export function About() {
             <div className="absolute -inset-8 bg-gradient-to-br from-red-500/20 to-black/20 rounded-3xl blur-3xl"></div>
             <div className="relative rounded-3xl overflow-hidden shadow-2xl">
               <img
-               src="/about-hero.jpg"
+            src="/about-hero.png"
                 alt="IEC Elektrik Mühendislik"
                 className="w-full h-[600px] object-cover"
               />
