@@ -65,7 +65,7 @@ export function Header() {
               className="h-16 w-16 object-contain transform hover:scale-110 transition-transform duration-300"
               style={{ mixBlendMode: 'darken' }}
             />
-            <div className={`transition-opacity duration-300 ${isScrolled ? "" : "hidden md:block"}`}>
+            <div className={transition-opacity duration-300 ${isScrolled ? "" : "block"}}>
               <h1 className={`text-xl font-bold transition-colors duration-300 ${
                 isScrolled ? "text-gray-900" : "text-white drop-shadow-lg"
               }`}>
