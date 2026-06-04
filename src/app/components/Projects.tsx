@@ -9,7 +9,7 @@ export function Projects() {
     {
       title: "Pano Sistemleri",
       category: "Pano Üretimi",
-      image: "https://images.unsplash.com/photo-1621905251918-48416bd8575a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxlbGVjdHJpY2FsJTIwcGFuZWwlMjB3b3JrZXJ8ZW58MXx8fHwxNzQxMTg1Njk4fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+      image: "../assets/ps1.jpg",
       description: "AG/OG dağıtım, MCC ve otomasyon panoları üretimi",
       link: "/pano-sistemleri",
     },
@@ -23,7 +23,7 @@ export function Projects() {
     {
       title: "Servis & Bakım",
       category: "Bakım",
-      image: "https://images.unsplash.com/photo-1621905252507-b35492cc74b4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxlbGVjdHJpY2FsJTIwbWFpbnRlbmFuY2V8ZW58MXx8fHwxNzQxMTg1Njk4fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+      image: "../assets/sb4.png",
       description: "Periyodik bakım, termal kamera kontrolleri ve arıza analizleri",
       link: "/servis-bakim",
     },
@@ -37,7 +37,7 @@ export function Projects() {
     {
       title: "Otomasyon Sistemleri",
       category: "Otomasyon",
-      image: "https://images.unsplash.com/photo-1738918897772-0ba101be25c8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxpbmR1c3RyaWFsJTIwYXV0b21hdGlvbiUyMGNvbnRyb2x8ZW58MXx8fHwxNzY5ODg3NTY5fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+      image: "../assets/oto1.jpg",
       description: "PLC, SCADA ve HMI tabanlı otomasyon çözümleri",
       link: "/otomasyon",
     },
