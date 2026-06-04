@@ -12,7 +12,7 @@ export function Projects() {
     {
       title: "Pano Sistemleri",
       category: "Pano Üretimi",
-      image: "../assets/ps1.jpg",
+     image: panoImage,
       description: "AG/OG dağıtım, MCC ve otomasyon panoları üretimi",
       link: "/pano-sistemleri",
     },
@@ -26,7 +26,7 @@ export function Projects() {
     {
       title: "Servis & Bakım",
       category: "Bakım",
-      image: "../assets/sb4.png",
+      image: servisImage,
       description: "Periyodik bakım, termal kamera kontrolleri ve arıza analizleri",
       link: "/servis-bakim",
     },
@@ -40,7 +40,7 @@ export function Projects() {
     {
       title: "Otomasyon Sistemleri",
       category: "Otomasyon",
-      image: "../assets/oto1.jpg",
+      image: otoImage,
       description: "PLC, SCADA ve HMI tabanlı otomasyon çözümleri",
       link: "/otomasyon",
     },
