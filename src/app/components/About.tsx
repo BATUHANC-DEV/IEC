@@ -1,6 +1,6 @@
 import { CheckCircle, Award, Users, TrendingUp, Target, Eye } from "lucide-react";
 import { motion } from "motion/react";
-import aboutImage from "figma:asset/da27febbb4800b8ba4de1fb4ec3cb2925c57a748.png";
+import aboutImage from "../../assets/da27febbb4800b8ba4de1fb4ec3cb2925c57a748.png";
 
 export function About() {
   const stats = [
