@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Menu, X, Phone, Mail } from "lucide-react";
 import { Button } from "@/app/components/ui/button";
-import logo from "figma:asset/18b16f5249c3ff094e1c6c1e6e2eeb6909227268.png";
+import logo from "../../../assets/logo.png";
 
 export function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
