@@ -1,5 +1,5 @@
 import { Button } from "@/app/components/ui/button";
-import { ImageWithFallback } from "@/app/components/figma/ImageWithFallback";
+
 import { motion } from "motion/react";
 import { ArrowRight, Zap } from "lucide-react";
 
