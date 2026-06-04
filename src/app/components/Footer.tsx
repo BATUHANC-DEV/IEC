@@ -1,5 +1,5 @@
 import { Facebook, Twitter, Linkedin, Instagram, ArrowUp } from "lucide-react";
-import logo from "figma:asset/18b16f5249c3ff094e1c6c1e6e2eeb6909227268.png";
+import logo from "../../assets/18b16f5249c3ff094e1c6c1e6e2eeb6909227268.png";
 
 export function Footer() {
   const scrollToTop = () => {
