@@ -15,11 +15,12 @@ export function Hero() {
     <section id="home" className="relative min-h-screen flex items-center overflow-hidden">
       {/* Background with parallax effect */}
       <div className="absolute inset-0">
-        <ImageWithFallback
-          src="https://images.unsplash.com/photo-1768796369926-2e25a1e4fc9b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxlbGVjdHJpY2FsJTIwZW5naW5lZXJpbmclMjBpbmR1c3RyaWFsJTIwZmFjaWxpdHl8ZW58MXx8fHwxNzY5ODg3NTY3fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
-          alt="IEC Mühendislik"
-          className="w-full h-full object-cover scale-110"
-        />
+       ```tsx
+    <img 
+      src="https://images.unsplash.com/photo-1768796369926-2e25a1e4fc9b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4NzN8MHwxfGFsbHx8fHx8fHx8fDE3MTc1MTU4ODZ8MA&ixlib=rb-4.0.3&q=80&w=1080" 
+      alt="IEC Mühendislik" 
+      className="w-full h-full object-cover scale-110" 
+    />
         <div className="absolute inset-0 bg-gradient-to-br from-black/90 via-gray-900/85 to-red-900/80"></div>
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(220,38,38,0.15),transparent_50%)]"></div>
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,rgba(0,0,0,0.3),transparent_50%)]"></div>
