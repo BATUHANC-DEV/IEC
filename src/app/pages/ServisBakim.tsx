@@ -1,7 +1,7 @@
 import { motion } from "motion/react";
 import { CheckCircle2, ArrowLeft } from "lucide-react";
 import { Link } from "react-router";
-import servisImage from "figma:asset/d9f22a27237465f28eaf48523ba8a87084364e72.png";
+import servisImage from "../../assets/d9f22a27237465f28eaf48523ba8a87084364e72.png";
 
 export function ServisBakim() {
   const services = [
