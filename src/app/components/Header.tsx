@@ -45,7 +45,7 @@ export function Header() {
           <div className="flex items-center gap-4">
             <a href="tel:+902121234567" className="flex items-center gap-2 hover:text-red-300 transition-colors">
               <Phone className="size-4" />
-              <span>+90 (212) 123 45 67</span>
+              <span>0541 895 34 86</span>
             </a>
             <a href="mailto:info@iecmuhendislik.com" className="flex items-center gap-2 hover:text-red-300 transition-colors">
               <Mail className="size-4" />
