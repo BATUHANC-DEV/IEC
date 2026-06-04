@@ -1,7 +1,7 @@
 import { motion } from "motion/react";
 import { CheckCircle2, ArrowLeft } from "lucide-react";
 import { Link } from "react-router";
-import panoImage from "../../assets/7ff12ebf1223e275eab5bcbe72f63f3a6a422a8b.png";
+import panoImage from "../../assets/ps1.jpg";
 
 export function PanoSistemleri() {
   const solutions = [
