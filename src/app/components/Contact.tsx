@@ -24,13 +24,13 @@ export function Contact() {
     {
       icon: MapPin,
       title: "Adres",
-      content: "Maslak Mahallesi, Ahi Evran Caddesi No:42/8 Sarıyer/İSTANBUL",
+      content: "Manisa, Merkez",
       gradient: "from-red-600 to-red-800",
     },
     {
       icon: Phone,
       title: "Telefon",
-      content: "+90 (212) 123 45 67",
+      content: "0541 895 34 86",
       gradient: "from-black to-gray-800",
     },
     {
@@ -42,7 +42,7 @@ export function Contact() {
     {
       icon: Clock,
       title: "Çalışma Saatleri",
-      content: "Pazartesi - Cuma: 09:00 - 18:00",
+      content: "7/24 Hizmetinizdeyiz",
       gradient: "from-red-800 to-black",
     },
   ];
