@@ -80,11 +80,11 @@ export function Projects() {
             const cardContent = (
               <Card className="group overflow-hidden hover:shadow-2xl transition-all duration-500 border-0 h-full bg-white">
                 <div className="relative h-64 overflow-hidden">
-                  <ImageWithFallback
-                    src={project.image}
-                    alt={project.title}
-                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                  />
+                 <img
+  src={project.image}
+  alt={project.title}
+  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+/>
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-500"></div>
                   <div className="absolute bottom-4 left-4 right-4">
                     <Badge className="mb-2 bg-white text-red-600 border-0 shadow-lg">{project.category}</Badge>
