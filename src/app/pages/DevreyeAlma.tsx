@@ -1,7 +1,7 @@
 import { motion } from "motion/react";
 import { CheckCircle2, ArrowLeft } from "lucide-react";
 import { Link } from "react-router";
-import devreImage from "figma:asset/3cc305ac233c3f92aa239a46705afee7db6d33f8.png";
+import devreImage from "../../assets/3cc305ac233c3f92aa239a46705afee7db6d33f8.png";
 
 export function DevreyeAlma() {
   const services = [
