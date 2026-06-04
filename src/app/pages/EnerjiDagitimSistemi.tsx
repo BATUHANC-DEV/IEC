@@ -1,7 +1,7 @@
 import { motion } from "motion/react";
 import { CheckCircle2, ArrowLeft } from "lucide-react";
 import { Link } from "react-router";
-import energyDistributionImg from "figma:asset/ac3bac4d656558fae74b805dad84e8c3c356aee8.png";
+import energyDistributionImg from "../../assets/ac3bac4d656558fae74b805dad84e8c3c356aee8.png";
 
 export function EnerjiDagitimSistemi() {
   const services = [
