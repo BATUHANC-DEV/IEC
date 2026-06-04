@@ -3,6 +3,9 @@ import { Card, CardContent } from "@/app/components/ui/card";
 import { Badge } from "@/app/components/ui/badge";
 import { motion } from "motion/react";
 import { Link } from "react-router";
+import otoImage from "../assets/oto1.jpg";
+import panoImage from "../assets/ps1.jpg";
+import servisImage from "../assets/sb4.png";
 
 export function Projects() {
   const projects = [
