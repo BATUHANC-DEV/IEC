@@ -1,7 +1,7 @@
 import { motion } from "motion/react";
 import { CheckCircle2, ArrowLeft } from "lucide-react";
 import { Link } from "react-router";
-import otomasyonImage from "figma:asset/924dad9e368e36bc14b0fda5365ab4ce9aad1fe1.png";
+import otomasyonImage from "../../assets/924dad9e368e36bc14b0fda5365ab4ce9aad1fe1.png";
 
 export function Otomasyon() {
   const services = [
