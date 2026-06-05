@@ -54,8 +54,8 @@ export function Footer() {
           <div>
             <h4 className="mb-6 text-lg font-semibold">İletişim</h4>
             <ul className="space-y-3 text-gray-400 text-sm">
-              <li>Şehzadeler, Manisa</li>
-              <li className="hover:text-red-400 transition-colors">+90 (212) 123 45 67</li>
+              <li>Manisa, Merkez</li>
+              <li className="hover:text-red-400 transition-colors">0541 895 34 86</li>
               <li className="hover:text-red-400 transition-colors">info@iecmuhendislik.com</li>
             </ul>
             <div className="flex gap-3 mt-6">
