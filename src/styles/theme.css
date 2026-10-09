@@ -179,3 +179,44 @@
     line-height: 1.5;
   }
 }
+
+/* Tasarım demosu: kurumsal yazı tipi ve bölüm üst başlıkları */
+:root {
+  --font-sans: "Manrope", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+}
+
+@layer base {
+  html {
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+}
+
+@layer components {
+  .eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 0.8125rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #b91c1c;
+  }
+  .eyebrow::before {
+    content: "";
+    width: 2rem;
+    height: 2px;
+    background: currentColor;
+  }
+  .eyebrow-dark {
+    color: #f87171;
+  }
+}
+
+/* Geniş ekranlarda içerik kenara yapışmasın */
+@utility container {
+  max-width: 80rem;
+}

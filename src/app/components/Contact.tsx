@@ -67,24 +67,22 @@ export function Contact() {
   ];
 
   return (
-    <section id="contact" className="py-24 md:py-32 bg-gradient-to-b from-gray-50 to-white relative overflow-hidden">
+    <section id="contact" className="py-24 md:py-32 bg-stone-50 relative overflow-hidden">
       {/* Decorative elements */}
       <div className="absolute top-1/4 right-0 w-96 h-96 bg-red-100 rounded-full blur-3xl opacity-20"></div>
       <div className="absolute bottom-1/4 left-0 w-96 h-96 bg-gray-200 rounded-full blur-3xl opacity-20"></div>
       
       <div className="container mx-auto px-4 relative">
         <motion.div 
-          className="text-center mb-20"
+          className="text-center mb-16"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          <div className="inline-block mb-6 px-4 py-2 bg-gradient-to-r from-red-50 to-gray-50 rounded-full border border-red-100">
-            <span className="text-red-700 text-sm font-semibold">Bizimle İletişime Geçin</span>
-          </div>
+          <p className="eyebrow mb-4">Bizimle İletişime Geçin</p>
           
-          <h2 className="text-4xl md:text-6xl mb-6 text-gray-900 font-bold">
+          <h2 className="text-4xl md:text-5xl mb-6 text-gray-950 font-extrabold tracking-tight">
             İletişim
           </h2>
           <p className="text-gray-600 max-w-3xl mx-auto text-xl leading-relaxed">

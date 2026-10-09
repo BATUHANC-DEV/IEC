@@ -1,122 +1,103 @@
-import { Button } from "@/app/components/ui/button";
-
 import { motion } from "motion/react";
-import { ArrowRight, Zap } from "lucide-react";
+import { ArrowRight, Zap, LayoutGrid, Network, Cpu, Wrench } from "lucide-react";
+
+const highlights = [
+  { Icon: LayoutGrid, label: "AG/OG Pano Sistemleri" },
+  { Icon: Network, label: "Enerji Dağıtımı" },
+  { Icon: Cpu, label: "PLC / SCADA Otomasyon" },
+  { Icon: Wrench, label: "Servis & Bakım" },
+];
+
+const stats = [
+  { value: "10+", label: "Yıllık Deneyim" },
+  { value: "100+", label: "Tamamlanan Proje" },
+  { value: "50+", label: "Mutlu Müşteri" },
+];
 
 export function Hero() {
   const scrollToSection = (href: string) => {
-    const element = document.querySelector(href);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
+    document.querySelector(href)?.scrollIntoView({ behavior: "smooth" });
   };
 
+  const fade = (delay: number) => ({
+    initial: { opacity: 0, y: 24 },
+    animate: { opacity: 1, y: 0 },
+    transition: { duration: 0.7, delay },
+  });
+
   return (
-    <section id="home" className="relative min-h-screen flex items-center overflow-hidden">
-      {/* Background with parallax effect */}
+    <section id="home" className="relative min-h-[100svh] flex flex-col bg-gray-950 overflow-hidden">
       <div className="absolute inset-0">
         <img
           src="https://images.unsplash.com/photo-1768796369926-2e25a1e4fc9b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4NzN8MHwxfGFsbHx8fHx8fHx8fDE3MTc1MTU4ODZ8MA&ixlib=rb-4.0.3&q=80&w=1600"
           alt=""
           aria-hidden="true"
           fetchPriority="high"
-          className="w-full h-full object-cover scale-110"
+          className="w-full h-full object-cover opacity-45"
         />
-        <div className="absolute inset-0 bg-gradient-to-br from-black/90 via-gray-900/85 to-red-900/80"></div>
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(220,38,38,0.15),transparent_50%)]"></div>
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,rgba(0,0,0,0.3),transparent_50%)]"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-gray-950 via-gray-950/85 to-gray-950/30" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_80%_10%,rgba(185,28,28,0.35),transparent_55%)]" />
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff08_1px,transparent_1px),linear-gradient(to_bottom,#ffffff08_1px,transparent_1px)] bg-[size:5rem_5rem] [mask-image:linear-gradient(to_bottom,black,transparent)]" />
       </div>
-      
-      {/* Animated grid overlay */}
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff15_1px,transparent_1px),linear-gradient(to_bottom,#ffffff15_1px,transparent_1px)] bg-[size:4rem_4rem]"></div>
-      </div>
-      
-      <div className="relative container mx-auto px-4 py-32">
-        <div className="max-w-4xl">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            <div className="inline-flex items-center gap-2 mb-6 px-4 py-2 bg-white/10 backdrop-blur-md rounded-full border border-white/20 shadow-lg">
-              <Zap className="size-4 text-red-400" />
-              <span className="text-white/90 text-sm font-medium">10+ Yıllık Tecrübe ile Güvenilir Çözümler</span>
-            </div>
-          </motion.div>
-          
-          <motion.h1 
-            className="text-5xl md:text-7xl lg:text-8xl mb-8 text-white leading-tight font-bold"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-          >
-            Elektrik ve
-            <br />
-            <span className="bg-gradient-to-r from-red-500 via-red-400 to-red-300 bg-clip-text text-transparent">
-              Otomasyon
+
+      <div className="relative flex-1 flex items-center container mx-auto px-4 pt-36 pb-16">
+        <div className="max-w-3xl">
+          <motion.div {...fade(0)} className="inline-flex items-center gap-2 mb-7 pl-2 pr-4 py-1.5 rounded-full bg-white/5 border border-white/15 backdrop-blur">
+            <span className="size-6 rounded-full bg-red-600 flex items-center justify-center">
+              <Zap className="size-3.5 text-white" />
             </span>
+            <span className="text-white/85 text-sm font-medium">Manisa merkezli elektrik & otomasyon mühendisliği</span>
+          </motion.div>
+
+          <motion.h1 {...fade(0.1)} className="text-[2.6rem] sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-white leading-[1.05] mb-7">
+            Elektrik ve <span className="text-red-500">Otomasyon</span>
             <br />
             Çözümlerinde Lideriz
           </motion.h1>
-          
-          <motion.p 
-            className="text-xl md:text-2xl mb-10 text-gray-300 leading-relaxed max-w-2xl"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-          >
+
+          <motion.p {...fade(0.2)} className="text-lg md:text-xl text-gray-300 leading-relaxed max-w-2xl mb-10">
             Endüstriyel elektrik tesisatı, otomasyon sistemleri ve enerji yönetimi alanlarında yenilikçi ve sürdürülebilir çözümler sunuyoruz.
           </motion.p>
-          
-          <motion.div 
-            className="flex flex-wrap gap-4"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
-          >
-            <Button 
-              size="lg" 
-              className="bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-black text-white px-8 py-6 text-lg shadow-2xl hover:shadow-red-500/50 transition-all duration-300 transform hover:scale-105 group"
+
+          <motion.div {...fade(0.3)} className="flex flex-wrap gap-3">
+            <button
+              onClick={() => scrollToSection("#contact")}
+              className="inline-flex items-center gap-2 rounded-xl bg-red-600 hover:bg-red-700 text-white font-semibold px-7 py-4 shadow-lg shadow-red-900/40 transition-colors group"
+            >
+              Teklif Alın
+              <ArrowRight className="size-5 group-hover:translate-x-1 transition-transform" />
+            </button>
+            <button
               onClick={() => scrollToSection("#services")}
+              className="inline-flex items-center gap-2 rounded-xl border border-white/25 text-white font-semibold px-7 py-4 hover:bg-white hover:text-gray-950 transition-colors"
             >
               Hizmetlerimizi Keşfedin
-              <ArrowRight className="ml-2 size-5 group-hover:translate-x-2 transition-transform" />
-            </Button>
-            <Button 
-              size="lg" 
-              className="bg-white/10 backdrop-blur-md border-2 border-white/30 text-white hover:bg-white hover:text-gray-900 px-8 py-6 text-lg transition-all duration-300 transform hover:scale-105"
-              onClick={() => scrollToSection("#contact")}
-            >
-              İletişime Geçin
-            </Button>
-          </motion.div>
-
-          {/* Stats */}
-          <motion.div 
-            className="grid grid-cols-3 gap-6 mt-20 pt-10 border-t border-white/20"
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.8 }}
-          >
-            <div>
-              <div className="text-4xl md:text-5xl font-bold text-white mb-2">100+</div>
-              <div className="text-gray-400 text-sm">Tamamlanan Proje</div>
-            </div>
-            <div>
-              <div className="text-4xl md:text-5xl font-bold text-white mb-2">50+</div>
-              <div className="text-gray-400 text-sm">Mutlu Müşteri</div>
-            </div>
-            <div>
-              <div className="text-4xl md:text-5xl font-bold text-white mb-2">10+</div>
-              <div className="text-gray-400 text-sm">Yıllık Deneyim</div>
-            </div>
+            </button>
           </motion.div>
         </div>
       </div>
-      
-      {/* Bottom gradient overlay */}
-      <div className="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-white to-transparent"></div>
+
+      {/* Alt şerit: öne çıkan alanlar + rakamlar */}
+      <motion.div {...fade(0.45)} className="relative border-t border-white/10 bg-black/40 backdrop-blur-md">
+        <div className="container mx-auto px-4 grid lg:grid-cols-12 gap-6 py-6">
+          <ul className="lg:col-span-7 flex flex-wrap items-center gap-x-7 gap-y-3">
+            {highlights.map(({ Icon, label }) => (
+              <li key={label} className="flex items-center gap-2.5 text-sm text-gray-300 whitespace-nowrap">
+                <Icon className="size-4 text-red-500 flex-shrink-0" />
+                {label}
+              </li>
+            ))}
+          </ul>
+          <div className="lg:col-span-5 grid grid-cols-3 gap-4 lg:border-l lg:border-white/10 lg:pl-8">
+            {stats.map((s) => (
+              <div key={s.label}>
+                <div className="text-2xl md:text-3xl font-extrabold text-white leading-none">{s.value}</div>
+                <div className="text-xs text-gray-400 mt-1.5">{s.label}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </motion.div>
     </section>
   );
 }
