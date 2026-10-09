@@ -1,9 +1,12 @@
 import { useState, useEffect } from "react";
+import { useLocation, useNavigate } from "react-router";
 import { Menu, X, Phone, Mail, LayoutDashboard } from "lucide-react";
 import { Button } from "@/app/components/ui/button";
 import logo from "../../assets/yeni-logo.png";
 
-const PANEL_URL = "https://panel.iecmuhendislik.com.tr";
+import { SITE } from "@/app/site";
+
+const PANEL_URL = SITE.panelUrl;
 
 export function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -25,12 +28,18 @@ export function Header() {
     { label: "İletişim", href: "#contact" },
   ];
 
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  // Ana sayfadaysa bölüme kayar; detay sayfalarındaysa ana sayfadaki bölüme gider.
   const scrollToSection = (href: string) => {
-    const element = document.querySelector(href);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-      setIsMobileMenuOpen(false);
+    setIsMobileMenuOpen(false);
+    if (location.pathname !== "/") {
+      navigate("/" + href);
+      return;
     }
+    const element = document.querySelector(href);
+    if (element) element.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
@@ -45,13 +54,13 @@ export function Header() {
       }`}>
         <div className="container mx-auto px-4 flex flex-wrap justify-between items-center text-sm">
           <div className="flex items-center gap-4">
-            <a href="tel:+905418953486" className="flex items-center gap-2 hover:text-red-300 transition-colors">
+            <a href={`tel:${SITE.phoneTel}`} className="flex items-center gap-2 hover:text-red-300 transition-colors">
               <Phone className="size-4" />
-              <span>0541 895 34 86</span>
+              <span>{SITE.phoneDisplay}</span>
             </a>
-            <a href="mailto:info@iecmuhendislik.com" className="flex items-center gap-2 hover:text-red-300 transition-colors">
+            <a href={`mailto:${SITE.email}`} className="flex items-center gap-2 hover:text-red-300 transition-colors">
               <Mail className="size-4" />
-              <span>info@iecmuhendislik.com</span>
+              <span>{SITE.email}</span>
             </a>
           </div>
         </div>
@@ -60,8 +69,8 @@ export function Header() {
       {/* Main Navigation */}
       <div className="container mx-auto px-4">
         <nav className="flex justify-between items-center py-2">
-          <div className="flex items-center gap-3">
-            <img 
+          <button type="button" onClick={() => scrollToSection("#home")} aria-label="Ana sayfa" className="flex items-center gap-3 text-left">
+            <img
               src={logo} 
               alt="IEC Mühendislik Logo" 
               className="h-16 w-16 object-contain transform hover:scale-110 transition-transform duration-300"
@@ -79,7 +88,7 @@ export function Header() {
                 Elektrik & Otomasyon
               </p>
             </div>
-          </div>
+          </button>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
@@ -123,6 +132,8 @@ export function Header() {
               isScrolled ? "text-gray-700" : "text-white"
             }`}
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            aria-label={isMobileMenuOpen ? "Menüyü kapat" : "Menüyü aç"}
+            aria-expanded={isMobileMenuOpen}
           >
             {isMobileMenuOpen ? (
               <X className="size-6" />

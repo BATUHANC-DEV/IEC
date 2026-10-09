@@ -1,7 +1,8 @@
 import { motion } from "motion/react";
+import { SiteShell } from "@/app/components/SiteShell";
 import { CheckCircle2, ArrowLeft } from "lucide-react";
 import { Link } from "react-router";
-import servisImage from "../../assets/sb4.png";
+import servisImage from "../../assets/sb4.jpg";
 
 export function ServisBakim() {
   const services = [
@@ -16,9 +17,10 @@ export function ServisBakim() {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
+    <SiteShell title="Servis & Bakım">
+    <div className="bg-gradient-to-b from-gray-50 to-white">
       {/* Hero Section */}
-      <section className="relative py-20 md:py-32 bg-gradient-to-br from-gray-900 to-gray-800 text-white overflow-hidden">
+      <section className="relative pt-36 pb-20 md:pt-48 md:pb-32 bg-gradient-to-br from-gray-900 to-gray-800 text-white overflow-hidden">
         <div className="absolute inset-0 opacity-20">
           <div className="absolute top-0 left-0 w-96 h-96 bg-red-600 rounded-full blur-3xl"></div>
           <div className="absolute bottom-0 right-0 w-96 h-96 bg-red-800 rounded-full blur-3xl"></div>
@@ -134,5 +136,6 @@ export function ServisBakim() {
         </div>
       </section>
     </div>
+    </SiteShell>
   );
 }

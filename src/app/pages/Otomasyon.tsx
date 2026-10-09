@@ -1,4 +1,5 @@
 import { motion } from "motion/react";
+import { SiteShell } from "@/app/components/SiteShell";
 import { CheckCircle2, ArrowLeft } from "lucide-react";
 import { Link } from "react-router";
 import otoImage from "../../assets/oto1.jpg";
@@ -16,9 +17,10 @@ export function Otomasyon() {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
+    <SiteShell title="Otomasyon Sistemleri">
+    <div className="bg-gradient-to-b from-gray-50 to-white">
       {/* Hero Section */}
-      <section className="relative py-20 md:py-32 bg-gradient-to-br from-gray-900 to-gray-800 text-white overflow-hidden">
+      <section className="relative pt-36 pb-20 md:pt-48 md:pb-32 bg-gradient-to-br from-gray-900 to-gray-800 text-white overflow-hidden">
         <div className="absolute inset-0 opacity-20">
           <div className="absolute top-0 left-0 w-96 h-96 bg-red-600 rounded-full blur-3xl"></div>
           <div className="absolute bottom-0 right-0 w-96 h-96 bg-red-800 rounded-full blur-3xl"></div>
@@ -58,7 +60,7 @@ export function Otomasyon() {
             className="relative rounded-3xl overflow-hidden shadow-2xl"
           >
             <img 
-              src={otomasyonImage} 
+              src={otoImage} 
               alt="Otomasyon Sistemleri" 
               className="w-full h-[400px] md:h-[600px] object-cover"
             />
@@ -134,5 +136,6 @@ export function Otomasyon() {
         </div>
       </section>
     </div>
+    </SiteShell>
   );
 }

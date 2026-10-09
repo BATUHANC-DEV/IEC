@@ -5,7 +5,7 @@ import { motion } from "motion/react";
 import { Link } from "react-router";
 import otoImage from "../../assets/oto1.jpg";
 import panoImage from "../../assets/ps1.jpg";
-import servisImage from "../../assets/sb4.png";
+import servisImage from "../../assets/sb4.jpg";
 
 export function Projects() {
   const projects = [
@@ -83,7 +83,7 @@ export function Projects() {
             const cardContent = (
               <Card className="group overflow-hidden hover:shadow-2xl transition-all duration-500 border-0 h-full bg-white">
                 <div className="relative h-64 overflow-hidden">
-                 <img
+                 <img loading="lazy"
   src={project.image}
   alt={project.title}
   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"

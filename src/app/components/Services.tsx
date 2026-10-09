@@ -4,10 +4,10 @@ import { motion, AnimatePresence } from "motion/react";
 import { useState } from "react";
 
 // Import images
-import engineeringImg from "../../assets/aec4d8485bb1a639b788b7bad07ef0557b2da0b7.png";
-import contractImg from "../../assets/1a9678d4e224afdcc720459b9c1ed079957547f1.png";
-import projectImg from "../../assets/e7ec1a5f9c02552521e2a7da9a292ca19bb12f80.png";
-import renewableEnergyImg from "../../assets/46c123fc687542d84b9c2f8ced61499affe2c6b8.png";
+import engineeringImg from "../../assets/aec4d8485bb1a639b788b7bad07ef0557b2da0b7.jpg";
+import contractImg from "../../assets/1a9678d4e224afdcc720459b9c1ed079957547f1.jpg";
+import projectImg from "../../assets/e7ec1a5f9c02552521e2a7da9a292ca19bb12f80.jpg";
+import renewableEnergyImg from "../../assets/46c123fc687542d84b9c2f8ced61499affe2c6b8.jpg";
 
 export function Services() {
   const [isEngineeringOpen, setIsEngineeringOpen] = useState(false);
@@ -127,7 +127,7 @@ export function Services() {
               viewport={{ once: true }}
               className="md:w-1/3"
             >
-              <img 
+              <img loading="lazy" 
                 src={projectImg} 
                 alt="Proje Yönetimi" 
                 className="w-full h-64 object-cover rounded-2xl shadow-xl"
@@ -221,7 +221,7 @@ export function Services() {
                 viewport={{ once: true }}
                 className="md:w-1/3"
               >
-                <img 
+                <img loading="lazy" 
                   src={contractImg} 
                   alt="Taahhüt" 
                   className="w-full h-64 object-cover rounded-2xl shadow-xl"
@@ -307,7 +307,7 @@ export function Services() {
                 viewport={{ once: true }}
                 className="md:w-1/3"
               >
-                <img 
+                <img loading="lazy" 
                   src={engineeringImg} 
                   alt="Mühendislik Hizmetleri" 
                   className="w-full h-64 object-cover rounded-2xl shadow-xl"
@@ -398,7 +398,7 @@ export function Services() {
                 viewport={{ once: true }}
                 className="md:w-1/3"
               >
-                <img 
+                <img loading="lazy" 
                   src={renewableEnergyImg} 
                   alt="Yenilenebilir Enerji" 
                   className="w-full h-64 object-cover rounded-2xl shadow-xl"
