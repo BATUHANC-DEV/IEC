@@ -1,7 +1,9 @@
 import { useState, useEffect } from "react";
-import { Menu, X, Phone, Mail } from "lucide-react";
+import { Menu, X, Phone, Mail, LayoutDashboard } from "lucide-react";
 import { Button } from "@/app/components/ui/button";
 import logo from "../../assets/yeni-logo.png";
+
+const PANEL_URL = "https://panel.iecmuhendislik.com.tr";
 
 export function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -43,7 +45,7 @@ export function Header() {
       }`}>
         <div className="container mx-auto px-4 flex flex-wrap justify-between items-center text-sm">
           <div className="flex items-center gap-4">
-            <a href="tel:+902121234567" className="flex items-center gap-2 hover:text-red-300 transition-colors">
+            <a href="tel:+905418953486" className="flex items-center gap-2 hover:text-red-300 transition-colors">
               <Phone className="size-4" />
               <span>0541 895 34 86</span>
             </a>
@@ -101,6 +103,18 @@ export function Header() {
             >
               Teklif Al
             </Button>
+            <a
+              href={PANEL_URL}
+              title="IEC ERP Yönetim Paneli"
+              className={`inline-flex items-center gap-2 rounded-md px-4 py-2 text-sm font-medium border transition-all duration-300 transform hover:scale-105 ${
+                isScrolled
+                  ? "border-gray-300 text-gray-800 hover:border-red-600 hover:text-red-700 bg-white"
+                  : "border-white/60 text-white hover:bg-white hover:text-red-700 backdrop-blur-sm"
+              }`}
+            >
+              <LayoutDashboard className="size-4" />
+              Yönetim Paneli
+            </a>
           </div>
 
           {/* Mobile Menu Button */}
@@ -134,6 +148,13 @@ export function Header() {
               <Button onClick={() => scrollToSection("#contact")} className="w-full bg-gradient-to-r from-red-600 to-red-800">
                 Teklif Al
               </Button>
+              <a
+                href={PANEL_URL}
+                className="w-full inline-flex items-center justify-center gap-2 rounded-md px-4 py-2 text-sm font-medium border border-gray-300 text-gray-800 hover:border-red-600 hover:text-red-700 transition-colors"
+              >
+                <LayoutDashboard className="size-4" />
+                Yönetim Paneli
+              </a>
             </div>
           </div>
         )}
