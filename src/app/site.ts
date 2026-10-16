@@ -5,7 +5,7 @@ export const SITE = {
   city: "Manisa, Merkez",
   phoneDisplay: "0541 895 34 86",
   phoneTel: "+905418953486",
-  email: "info@iecmuhendislik.com",
+  email: "info@iecmuhendislik.com.tr",
   whatsapp: "905418953486",
   // Boş bırakılan sosyal medya hesapları alt bilgide "yakında" olarak görünür
   instagram: "https://www.instagram.com/iecelektrikmuhendislik/",
