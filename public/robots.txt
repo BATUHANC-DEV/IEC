@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://xn--iecmhendislik-zob.com.tr/sitemap.xml
+Sitemap: https://iecmuhendislik.com.tr/sitemap.xml
