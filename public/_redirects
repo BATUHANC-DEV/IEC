@@ -1,1 +1,4 @@
+# Ü'lü adres (iecmühendislik.com.tr) ana adrese yönlenir; Chrome'un benzer alan adı uyarısını önler
+https://xn--iecmhendislik-zob.com.tr/*      https://iecmuhendislik.com.tr/:splat  301!
+https://www.xn--iecmhendislik-zob.com.tr/*  https://iecmuhendislik.com.tr/:splat  301!
 /*  /index.html  200
