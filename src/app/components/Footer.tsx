@@ -1,4 +1,4 @@
-import { Linkedin, Instagram, ArrowUp, Phone, Mail, MapPin, LayoutDashboard } from "lucide-react";
+import { Linkedin, Instagram, ArrowUp, Phone, Mail, MapPin, LayoutDashboard, UserRound } from "lucide-react";
 import { Link } from "react-router";
 import logo from "../../assets/18b16f5249c3ff094e1c6c1e6e2eeb6909227268.png";
 import { SITE, whatsappLink } from "@/app/site";
@@ -146,6 +146,13 @@ export function Footer() {
           </p>
 
           <div className="flex items-center gap-4 md:mr-20">
+            <a
+              href={SITE.portalUrl}
+              className="inline-flex items-center gap-2 text-sm text-gray-400 hover:text-red-400 transition-colors"
+            >
+              <UserRound className="size-4" />
+              Müşteri Girişi
+            </a>
             <a
               href={SITE.panelUrl}
               className="inline-flex items-center gap-2 text-sm text-gray-400 hover:text-red-400 transition-colors"

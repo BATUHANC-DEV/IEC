@@ -11,6 +11,8 @@ export const SITE = {
   instagram: "https://www.instagram.com/iecelektrikmuhendislik/",
   linkedin: "",
   panelUrl: "https://panel.iecmuhendislik.com.tr",
+  // Müşterilerin projelerini salt-okunur takip ettiği portal
+  portalUrl: "https://portal.iecmuhendislik.com.tr",
 };
 
 export const whatsappLink = (text = "Merhaba, IEC Mühendislik web sitesinden ulaşıyorum.") =>

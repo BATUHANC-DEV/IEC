@@ -1,12 +1,13 @@
 import { useState, useEffect } from "react";
 import { useLocation, useNavigate } from "react-router";
-import { Menu, X, Phone, Mail, LayoutDashboard } from "lucide-react";
+import { Menu, X, Phone, Mail, LayoutDashboard, UserRound } from "lucide-react";
 import { Button } from "@/app/components/ui/button";
 import logo from "../../assets/yeni-logo.png";
 
 import { SITE } from "@/app/site";
 
 const PANEL_URL = SITE.panelUrl;
+const PORTAL_URL = SITE.portalUrl;
 
 export function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -91,7 +92,7 @@ export function Header() {
           </button>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden lg:flex items-center gap-6 xl:gap-8">
             {navItems.map((item) => (
               <button
                 key={item.href}
@@ -113,6 +114,18 @@ export function Header() {
               Teklif Al
             </Button>
             <a
+              href={PORTAL_URL}
+              title="Müşteri Portalı: projenizi canlı takip edin"
+              className={`inline-flex items-center gap-2 rounded-md px-4 py-2 text-sm font-semibold border transition-all duration-300 transform hover:scale-105 ${
+                isScrolled
+                  ? "border-red-600 text-red-700 hover:bg-red-600 hover:text-white bg-white"
+                  : "border-white text-white bg-white/10 hover:bg-white hover:text-red-700 backdrop-blur-sm"
+              }`}
+            >
+              <UserRound className="size-4" />
+              Müşteri Girişi
+            </a>
+            <a
               href={PANEL_URL}
               title="IEC ERP Yönetim Paneli"
               className={`inline-flex items-center gap-2 rounded-md px-4 py-2 text-sm font-medium border transition-all duration-300 transform hover:scale-105 ${
@@ -128,7 +141,7 @@ export function Header() {
 
           {/* Mobile Menu Button */}
           <button
-            className={`md:hidden transition-colors duration-300 ${
+            className={`lg:hidden transition-colors duration-300 ${
               isScrolled ? "text-gray-700" : "text-white"
             }`}
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -145,7 +158,7 @@ export function Header() {
 
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
-          <div className="md:hidden pb-4 bg-white/95 backdrop-blur-xl rounded-lg mt-2 p-4 shadow-2xl">
+          <div className="lg:hidden pb-4 bg-white/95 backdrop-blur-xl rounded-lg mt-2 p-4 shadow-2xl">
             <div className="flex flex-col gap-3">
               {navItems.map((item) => (
                 <button
@@ -159,6 +172,13 @@ export function Header() {
               <Button onClick={() => scrollToSection("#contact")} className="w-full bg-gradient-to-r from-red-600 to-red-800">
                 Teklif Al
               </Button>
+              <a
+                href={PORTAL_URL}
+                className="w-full inline-flex items-center justify-center gap-2 rounded-md px-4 py-2 text-sm font-semibold border border-red-600 text-red-700 hover:bg-red-600 hover:text-white transition-colors"
+              >
+                <UserRound className="size-4" />
+                Müşteri Girişi
+              </a>
               <a
                 href={PANEL_URL}
                 className="w-full inline-flex items-center justify-center gap-2 rounded-md px-4 py-2 text-sm font-medium border border-gray-300 text-gray-800 hover:border-red-600 hover:text-red-700 transition-colors"
